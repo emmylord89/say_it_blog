@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Create Post - Say It Blog</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <h1>Create New Post</h1>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="admin_login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <form action="admin_create_post.php" method="POST" enctype="multipart/form-data">
+            <!-- Post Title -->
+            <div class="input-group">
+                <label for="title">Post Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <!-- Post Content -->
+            <div class="input-group">
+                <label for="content">Post Content:</label>
+                <textarea id="content" name="content" rows="10" required></textarea>
+            </div>
+
+            <!-- Upload Media -->
+            <div class="input-group">
+                <label for="media">Upload Image/Video:</label>
+                <input type="file" id="media" name="media" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="create-btn">Create Post</button>
+        </form>
+    </div>
+
+</body>
+</html>
