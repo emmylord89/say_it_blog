@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Query to get posts, ordered by creation date (latest first)
-$sql = "SELECT title, content, media, created_at FROM posts ORDER BY created_at DESC";
+$sql = "SELECT title, media, content, created_at FROM posts_1 ORDER BY created_at DESC";
 $result = $conn->query($sql);
 
 $posts = array();
