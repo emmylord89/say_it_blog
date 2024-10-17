@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($conn->query($sql) === TRUE) {
                 echo "New post created successfully!";
                 // Redirect or display a success message
-                header("Location: get_recent_posts.php"); // Redirect to posts page
+                header("Location: index.php"); // Redirect to posts page
                 exit();
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
