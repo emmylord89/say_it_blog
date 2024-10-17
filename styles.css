@@ -95,14 +95,59 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
-
+/* Post container styles */
 .post-container {
-    width: 80%; /* Reduce width of the post container */
-    margin: 20px auto; /* Centered margin */
-    padding: 20px; /* Padding inside the post container */
-    background-color: #f9f9f9; /* Light background color for contrast */
+    width: 70%; /* Reduce width of the post container */
+    margin: 20px auto; /* Center the post container */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
     border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
+    text-align: center; /* Center the content inside the container */
+}
+
+/* Individual post item */
+.post-item {
+    margin-bottom: 30px; /* Space between posts */
+    text-align: center; /* Center align the post item */
+}
+
+/* Media styling for post */
+.post-item img, .post-item video {
+    width: 80%; /* Set media width slightly increased */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure media fits without distortion */
+    border-radius: 8px;
+    margin: 10px auto; /* Center the media */
+    display: block; /* Ensure the media is centered */
+}
+
+/* Title and content styling */
+.post-item h2, .post-item p {
+    width: 80%; /* Set title and content width the same as the media */
+    margin: 10px auto; /* Center the title and content */
+}
+
+.post-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Post content styling */
+.post-item p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Post date styling */
+.post-item small {
+    font-size: 14px;
+    color: #999;
+    display: block;
+    margin-top: 5px;
 }
 
 /* Button styles */

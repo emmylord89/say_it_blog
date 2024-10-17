@@ -1,16 +1,32 @@
+<?php
+session_start(); // Start the session to access session variables
+
+// Assume the user is logged in and their full name is stored in the session
+// e.g., $_SESSION['fullname'] = 'John Doe';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="user.css">
-    <title>Say It Blog</title>
+    <link rel="stylesheet" href="user.css"> <!-- Assuming you have a separate CSS file for user styling -->
+    <title>User Profile - Say It Blog</title>
 </head>
 <body>
-   <!-- Navigation Bar -->
+   <!-- Navigation Bar for User -->
    <nav>
         <div class="nav-left">
-            <h1>Create New Post</h1>
+            <!-- Display the logged-in user's name instead of 'User Profile' -->
+            <h1>
+                <?php
+                if (isset($_SESSION['fullname'])) {
+                    echo "Welcome, " . htmlspecialchars($_SESSION['fullname']); // Display user's full name
+                } else {
+                    echo "User Profile"; // Fallback text in case the user name is not available
+                }
+                ?>
+            </h1>
         </div>
         <div class="nav-right">
             <ul>
@@ -19,7 +35,16 @@
             </ul>
         </div>
     </nav>
-    </header>
+
+    <!-- Flash Welcome Message -->
+    <?php if (isset($_SESSION['welcome_message'])): ?>
+        <div class="flash-message">
+            <?php 
+            echo $_SESSION['welcome_message']; 
+            unset($_SESSION['welcome_message']); // Unset the message after displaying it
+            ?>
+        </div>
+    <?php endif; ?>
 
     <!-- "Say It Blog" Banner Section -->
     <section class="say-it-banner">

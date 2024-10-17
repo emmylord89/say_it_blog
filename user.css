@@ -68,13 +68,58 @@ header {
 }
 
 
+/* Post container styles */
 .post-container {
-    width: 80%; /* Reduce width of the post container */
-    margin: 20px auto; /* Centered margin */
-    padding: 20px; /* Padding inside the post container */
-    background-color: #f9f9f9; /* Light background color for contrast */
+    width: 70%; /* Reduce width of the post container */
+    margin: 20px auto; /* Center the post container */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
     border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
+    text-align: center; /* Center the content inside the container */
+}
+
+/* Individual post item */
+.post-item {
+    margin-bottom: 30px; /* Space between posts */
+    text-align: center; /* Center align the post item */
+}
+
+/* Media styling for post */
+.post-item img, .post-item video {
+    width: 100%; /* Set a uniform width */
+    max-width: 400px; /* Maximum width for media */
+    height: 300px; /* Fixed height for media */
+    object-fit: cover; /* Cover the area without distorting the media */
+    border-radius: 8px;
+    margin: 10px auto; /* Center the media and add space */
+    display: block; /* Ensure the media is centered */
+}
+
+/* Title styling */
+.post-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Post content styling */
+.post-item p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+    max-width: 600px; /* Limit the width of the content */
+    margin-left: auto;
+    margin-right: auto; /* Center the content */
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Post date styling */
+.post-item small {
+    font-size: 14px;
+    color: #999;
+    display: block;
+    margin-top: 5px;
 }
 
 /* Button styles */
@@ -90,8 +135,6 @@ button {
 button:hover {
     background-color: #45a049;
 }
-
-
 
 /* Navigation Bar Styling */
 nav {
@@ -130,4 +173,24 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+/* Flash message */
+.flash-message {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    margin: 10px auto; /* Margin to separate it from other elements */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    font-weight: bold; /* Make the text bold */
+    display: inline-block; /* Ensures background width fits content */
+    max-width: 80%; /* Set a max width */
+}
+
+/* Center the flash message */
+.flash-message-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px; /* Ensures it's below the navbar */
 }
