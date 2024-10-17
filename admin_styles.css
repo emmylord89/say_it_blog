@@ -105,3 +105,13 @@ body {
         padding: 10px;
     }
 }
+
+.flash-error-message {
+    background-color: #ff4d4d; /* Red background for error */
+    color: white; /* White text */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}

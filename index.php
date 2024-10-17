@@ -15,7 +15,7 @@
                     <li><a href="register.html">Signup</a></li>
                     <li><a href="login.html">Login</a></li>
                     <!-- <li><a href="profile.html">User Profile</a></li> -->
-                    <li><a href="admin_login.html">Admin Section</a></li>
+                    <!--<li><a href="admin_login.html">Admin Section</a></li> -->
                 </ul>
             </div>
         </nav>

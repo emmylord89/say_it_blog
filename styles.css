@@ -139,7 +139,14 @@ nav ul li a:hover {
     font-size: 18px;
     color: #666;
     margin-bottom: 15px;
-    line-height: 1.5; /* Improve readability */
+    line-height: 1.8; /* Improve readability and increase line height */
+}
+
+/* Paragraph styling inside posts */
+.post-item p + p {
+    margin-top: 20px; /* Add extra space between consecutive paragraphs */
+    text-align: left; /* Ensure paragraphs are left-aligned for better readability */
+    width: 80%; /* Keep consistent with media and title width */
 }
 
 /* Post date styling */

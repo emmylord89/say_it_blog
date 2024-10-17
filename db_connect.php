@@ -1,8 +1,8 @@
 <?php
 // db_connect.php
 $servername = "localhost";
-$username = "root"; // Change this to your MySQL username
-$password = ""; // Change this to your MySQL password
+$username = "root"; // Username
+$password = ""; // DB Password
 $dbname = "say_it_blog";
 
 // Create connection

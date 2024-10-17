@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Check if the user exists and is an admin
-    $sql = "SELECT * FROM new_user WHERE username='$username' AND role='user'";
+    $sql = "SELECT * FROM new_user WHERE username='$username' AND role='admin'";
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
@@ -35,10 +35,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: admin_create_post.html");
             exit();
         } else {
-            echo "Invalid password";
+            $_SESSION['error_message'] = "Invalid password"; // Set error message
+            header("Location: admin_login.html");
+            exit();
         }
     } else {
-        echo "Admin user not found";
+        $_SESSION['error_message'] = "Admin user not found"; // Set error message
+        header("Location: admin_login.html");
+        exit();
     }
 }
 
